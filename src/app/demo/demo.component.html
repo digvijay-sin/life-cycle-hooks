@@ -1,3 +1,6 @@
 <div class = "demo">
     <p #tempRef *ngFor = "let msg of message"> Message: {{msg}}</p>
 </div>
+<!--  using ng-content i can project some content from parent component to here, this process is also called content projection -->
+<ng-content></ng-content> 
+

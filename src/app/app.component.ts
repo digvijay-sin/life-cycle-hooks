@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { DemoComponent } from './demo/demo.component';
@@ -11,7 +11,7 @@ import { DemoComponent } from './demo/demo.component';
   styleUrl: './app.component.scss'
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'life-cycle-hooks';
   inputVal : string[] = ['Hello', 'Hi Dev'];
 
@@ -21,5 +21,15 @@ export class AppComponent {
 
   public constructor() {
     console.log('App Component constructor is called')
+    console.log(this.title)
+    console.log(this.inputVal);
+  } 
+  
+  ngOnInit(): void {
+    console.log('App  Oninit Hook called');
+  }
+
+  ngDoCheck(){
+    console.log('App ngDoCheck Hook called')
   }
 }
