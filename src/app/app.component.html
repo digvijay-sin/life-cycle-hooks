@@ -1,8 +1,9 @@
 <div class="container">
   <input type = "text" #inputRef (focus)="0">
   <button (click) = onBtnClicked(inputRef)>Submit</button>
-  <app-demo [message] = "inputVal">
+  <app-demo [message] = "inputVal" *ngIf = "!toDestroy" >
     <p #temp>User has entered following text: {{inputVal}}</p>
   </app-demo>
+  <button type="button" (click)="createAndDestroy()">Create/Destroy</button>
 </div>
  

@@ -6,5 +6,5 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { DemoComponent } from './demo/demo.component';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), DemoComponent]
+  providers: [provideRouter(routes), DemoComponent]
 };
